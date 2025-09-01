@@ -4,7 +4,7 @@ LDFLAGS=/SUBSYSTEM:CONSOLE
 LIBS=kernel32.lib user32.lib ws2_32.lib
 
 SRCDIR=src
-SOURCES=$(SRCDIR)/main.c $(SRCDIR)/anti_debug.c $(SRCDIR)/crypto.c $(SRCDIR)/network.c $(SRCDIR)/file_ops.c $(SRCDIR)/utils.c
+SOURCES=$(SRCDIR)/*.c
 TARGET=novalocker.exe
 
 $(TARGET): $(SOURCES)
