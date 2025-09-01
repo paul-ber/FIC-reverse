@@ -1,11 +1,24 @@
 #pragma once
+
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT 0x0601  // Windows 7+
+#endif
+
 #include <winsock2.h>
 #include <windows.h>
 #include <ws2tcpip.h>
-#include <bcrypt.h>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
+
+// Pragmas pour les libs
+#pragma comment(lib, "ws2_32.lib")
 
 // Constants
 #define MAGIC_HEADER 0x4E4F5641

